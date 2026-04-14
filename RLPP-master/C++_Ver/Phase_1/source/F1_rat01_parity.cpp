@@ -3,36 +3,12 @@
 #include "exponential_history_encoder.hpp"
 #include "decoder_history_buffer.hpp"
 #include "decoding_model01.hpp"
+#include "math_functions.hpp"
 
 #include <Eigen/Dense>
 #include <iostream>
 #include <stdexcept>
 #include <vector>
-
-// MATLAB: Y(i,:) = X(sortedIndices(i),:) with 1-based sortedIndices — match row order to ref build.
-static Eigen::MatrixXd apply_sorted_row_order_matlab(
-    const Eigen::MatrixXd& spikes_Ny_by_T,
-    const Eigen::VectorXi& sorted_indices_1based
-) {
-    const int Ny = static_cast<int>(spikes_Ny_by_T.rows());
-    const int T  = static_cast<int>(spikes_Ny_by_T.cols());
-    if (sorted_indices_1based.size() != Ny) {
-        throw std::runtime_error(
-            "sortedIndices length must equal Ny (got " + std::to_string(sorted_indices_1based.size()) +
-            ", Ny=" + std::to_string(Ny) + ")");
-    }
-    Eigen::MatrixXd out(Ny, T);
-    for (int i = 0; i < Ny; ++i) {
-        const int src = sorted_indices_1based(i) - 1; // 1-based -> 0-based
-        if (src < 0 || src >= Ny) {
-            throw std::runtime_error(
-                "sortedIndices(" + std::to_string(i) + ")=" + std::to_string(sorted_indices_1based(i)) +
-                " out of range for Ny=" + std::to_string(Ny));
-        }
-        out.row(i) = spikes_Ny_by_T.row(src);
-    }
-    return out;
-}
 
 static Eigen::MatrixXd build_decoder_features_from_spikes(
     const Eigen::MatrixXd& spikes_Ny_by_T,
@@ -54,7 +30,7 @@ static double max_abs_err(const Eigen::MatrixXd& A, const Eigen::MatrixXd& B) {
 
 
 
-void run_encoder_parity_or_throw(const F1Bundle& bundle) {
+void run_encoder_parity_or_throw(const F1Bundle& bundle, double tau_bins) {
     const int T = static_cast<int>(bundle.upstream_spikes.rows());
     const int Nx = static_cast<int>(bundle.upstream_spikes.cols());
 
@@ -80,7 +56,10 @@ void run_encoder_parity_or_throw(const F1Bundle& bundle) {
     }
 
     const int H = feature_dim / Nx;
-    const double tau_bins = 150.0; // must match your MATLAB export config
+    if (!(tau_bins > 0.0)) {
+        throw std::runtime_error("Encoder parity: tau_bins must be positive");
+    }
+    std::cout << "Encoder parity: tau_bins=" << tau_bins << "\n";
 
     ExponentialHistoryEncoder encoder(Nx, H, tau_bins);
 
@@ -213,8 +192,8 @@ void run_decoder_feature_parity_or_throw(const F1Bundle& bundle) {
     }
     Eigen::MatrixXd spikes_ordered = bundle.downstream_spikes_ref;
     if (bundle.sorted_indices_1based.size() > 0) {
-        spikes_ordered = apply_sorted_row_order_matlab(bundle.downstream_spikes_ref,
-                                                       bundle.sorted_indices_1based);
+        spikes_ordered = apply_sorted_indices_1based_matrix(bundle.downstream_spikes_ref,
+                                                              bundle.sorted_indices_1based);
         std::cout << "Decoder feature parity: applied sortedIndices.csv (MATLAB row order).\n";
     } else {
         std::cout << "Decoder feature parity: sortedIndices.csv not found; using raw downstream row order "

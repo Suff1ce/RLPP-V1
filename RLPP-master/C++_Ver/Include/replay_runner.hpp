@@ -27,6 +27,9 @@ struct ReplayConfig {
     bool dump_downstream_spikes = false;
     bool dump_decoder_features = false;
 
+    /// Concatenated pack_rlpp_hardware_frame_v1() blobs (see hardware_io_contract_v1.txt)
+    bool dump_hardware_trace_v1 = false;
+
     // Latency options
     bool latency_only_valid_bins = true;
 

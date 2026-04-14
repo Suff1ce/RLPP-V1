@@ -2,7 +2,7 @@
 
 #include "F1_rat01_bundle.hpp"
 
-void run_encoder_parity_or_throw(const F1Bundle& bundle);
+void run_encoder_parity_or_throw(const F1Bundle& bundle, double tau_bins);
 
 void run_generator_parity_or_throw(const F1Bundle& bundle);
 

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\rlpp_phase1_cli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\csv_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\math_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\two_layer_mlp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\exponential_history_encoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\decoder_history_buffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\F1_rat01_bundle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\F1_rat01_validate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\F1_rat01_parity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\decoding_model01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\replay_runner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\RLPP_inference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\rlpp_hardware_output.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RLPP-master\C++_Ver\Phase_1\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{81668B9C-637A-36C9-A446-A5407D47A8F3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

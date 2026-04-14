@@ -1,0 +1,10 @@
+^D:\RLPP-MASTER\C++_VER\PHASE_1\CMAKELISTS.TXT
+setlocal
+D:\CMake\bin\cmake.exe -SD:/RLPP-master/C++_Ver/Phase_1 -BD:/RLPP-master/C++_Ver/Phase_1/build --check-stamp-file D:/RLPP-master/C++_Ver/Phase_1/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

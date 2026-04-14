@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_3\source\rlpp_phase3_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_3\source\rlpp_training_math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_1\source\csv_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RLPP-master\C++_Ver\Phase_3\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4E76EC0E-4A69-31BE-A01B-395D4870883D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,36 +1,19 @@
 #include "replay_runner.hpp"
 #include "csv_utils.hpp"
+#include "RLPP_inference.hpp"
+#include "rlpp_hardware_output.hpp"
+#include "two_layer_mlp.hpp"
+#include "math_functions.hpp"
 
 #include <filesystem>
-#include <random>
+#include <fstream>
+#include <memory>
 #include <stdexcept>
 #include <iostream>
 #include <chrono>
 #include <algorithm>
 #include <numeric>
-
-#include "exponential_history_encoder.hpp"
-#include "two_layer_mlp.hpp"
-#include "decoder_history_buffer.hpp"
-#include "decoding_model01.hpp"
-#include "math_functions.hpp"
-
-static Eigen::VectorXd apply_sorted_indices_1based(
-    const Eigen::VectorXd& v_unsorted,
-    const Eigen::VectorXi& sorted_indices_1based
-) {
-    const int n = static_cast<int>(v_unsorted.size());
-    if (sorted_indices_1based.size() != n) {
-        throw std::runtime_error("sorted_indices_1based length != vector length");
-    }
-    Eigen::VectorXd out(n);
-    for (int i = 0; i < n; ++i) {
-        const int src = sorted_indices_1based(i) - 1;
-        if (src < 0 || src >= n) throw std::runtime_error("sorted index out of range");
-        out(i) = v_unsorted(src);
-    }
-    return out;
-}
+#include <vector>
 
 static void ensure_dir_exists_or_throw(const std::string& dir) {
     namespace fs = std::filesystem;
@@ -66,7 +49,6 @@ static void print_latency_summary_us(const std::vector<long long>& us) {
     std::sort(s.begin(), s.end());
 
     auto pct = [&](double p) -> long long {
-        // p in [0,1]
         const double idx = p * (s.size() - 1);
         const std::size_t i = static_cast<std::size_t>(idx);
         return s[i];
@@ -117,8 +99,8 @@ static void print_confusion_matrix_1based_3class(
     long long cm[3][3] = {{0,0,0},{0,0,0},{0,0,0}};
     const int n = std::min(pred_labels.size(), ref_labels.size());
     for (int i = 0; i < n; ++i) {
-        const int a = pred_labels(i); // pred
-        const int b = ref_labels(i);  // ref
+        const int a = pred_labels(i);
+        const int b = ref_labels(i);
         if (a >= 1 && a <= 3 && b >= 1 && b <= 3) {
             cm[a-1][b-1] += 1;
         }
@@ -136,22 +118,17 @@ ReplayResult run_replay_or_throw(
     double ymin,
     const ReplayConfig& cfg
 ) {
-    // Infer dims
     const int T  = static_cast<int>(bundle.upstream_spikes.rows());
     const int Nx = static_cast<int>(bundle.upstream_spikes.cols());
     const int feature_dim = static_cast<int>(bundle.encoder_features_ref.rows());
     if (feature_dim % Nx != 0) throw std::runtime_error("feature_dim not divisible by Nx");
     const int H = feature_dim / Nx;
 
-    TwoLayerMLP gen(bundle.generator_W1, bundle.generator_W2);
-    const int Ny = gen.output_dim();
+    const int Ny = TwoLayerMLP(bundle.generator_W1, bundle.generator_W2).output_dim();
 
     if (bundle.decoder_features_ref.rows() % Ny != 0)
         throw std::runtime_error("decoder_features_ref rows not divisible by Ny");
     const int num_lags = static_cast<int>(bundle.decoder_features_ref.rows() / Ny);
-
-    DecoderHistoryBuffer dec_hist(Ny, num_lags);
-    ExponentialHistoryEncoder encoder(Nx, H, cfg.tau_bins);
 
     const int T_valid = static_cast<int>(bundle.decoder_logits_ref.cols());
     const int num_labels = static_cast<int>(bundle.decoder_logits_ref.rows());
@@ -167,11 +144,25 @@ ReplayResult run_replay_or_throw(
         throw std::runtime_error("valid_col_count out of range");
     }
 
+    RLPPInferenceConfig icfg;
+    icfg.tau_bins = cfg.tau_bins;
+    icfg.rng_seed = cfg.rng_seed;
+    icfg.spike_mode = SpikeDriveMode::SampledBernoulli;
+
+    RLPPInference inf(
+        Nx, H, Ny, num_lags,
+        bundle.sorted_indices_1based,
+        bundle.generator_W1, bundle.generator_W2,
+        xoffset, gain, ymin,
+        bundle.decoder_W1, bundle.decoder_b1,
+        bundle.decoder_W2, bundle.decoder_b2,
+        icfg
+    );
+
     ReplayResult out;
     out.decoder_logits.resize(num_labels, out_cols);
     out.labels.resize(out_cols);
 
-    // Optional debug dumps (allocated only if enabled)
     Eigen::MatrixXd probs_dump;
     Eigen::MatrixXd spikes_dump;
     Eigen::MatrixXd feats_dump;
@@ -191,83 +182,97 @@ ReplayResult run_replay_or_throw(
         latency_us.reserve(out_cols);
     }
 
-    // Ensure output directory exists if we will dump anything
     if (cfg.dump_decoder_logits || cfg.dump_labels || cfg.dump_latency_us ||
-        cfg.dump_generator_probs || cfg.dump_downstream_spikes || cfg.dump_decoder_features) {
+        cfg.dump_generator_probs || cfg.dump_downstream_spikes || cfg.dump_decoder_features ||
+        cfg.dump_hardware_trace_v1) {
         ensure_dir_exists_or_throw(cfg.out_dir);
     }
 
-    std::mt19937 rng(cfg.rng_seed);
+    std::unique_ptr<std::ofstream> hardware_trace_out;
+    if (cfg.dump_hardware_trace_v1) {
+        hardware_trace_out = std::make_unique<std::ofstream>(
+            cfg.out_dir + "/hardware_trace_v1.bin",
+            std::ios::binary | std::ios::trunc
+        );
+        if (!*hardware_trace_out) {
+            throw std::runtime_error("replay: cannot open hardware_trace_v1.bin for write");
+        }
+    }
 
-    int col = 0;     // global valid-col index (0..T_valid-1)
-    int rec_col = 0; // recorded-col index (0..out_cols-1)
+    int col = 0;
+    int rec_col = 0;
     for (int t_idx = 0; t_idx < T; ++t_idx) {
         const int t = t_idx + 1;
 
         Eigen::VectorXd u_t = bundle.upstream_spikes.row(t_idx).transpose();
-        encoder.observe_bin(u_t, t);
-
-        if (!encoder.can_encode(t)) continue;
-        if (col >= T_valid) throw std::runtime_error("replay produced too many valid cols");
 
         const bool record = (col >= cfg.valid_col_start) && (rec_col < out_cols);
-        const auto t0 = std::chrono::high_resolution_clock::now();
+        const bool time_this_bin = record && cfg.dump_latency_us;
 
-        Eigen::VectorXd x_t = encoder.encode(t);
-        Eigen::VectorXd p_t = gen.forward(x_t);
+        using clock = std::chrono::high_resolution_clock;
+        clock::time_point t0{};
+        clock::time_point t1{};
 
-        Eigen::VectorXd s_t;
-        if (cfg.mode == ReplayMode::SampledFromGeneratorProbs) {
-            s_t = sample_Bernoulli(p_t, rng);               // 0/1 doubles
+        RLPPInferenceStepOutput o;
+        if (time_this_bin) {
+            t0 = clock::now();
+        }
+
+        if (cfg.mode == ReplayMode::DeterministicFromBundleSpikes) {
+            // Column is read inside RLPPInference only after observe + can_encode (ordering-safe).
+            o = inf.step_with_downstream_spikes(u_t, bundle.downstream_spikes_ref, col, t);
         } else {
-            // Use MATLAB-exported sampled spikes to remove RNG differences
-            s_t = bundle.downstream_spikes_ref.col(col);    // IMPORTANT: uses valid-col indexing
+            o = inf.step(u_t, t);
         }
 
-        // Sort to match emulator_real
-        if (bundle.sorted_indices_1based.size() > 0) {
-            s_t = apply_sorted_indices_1based(s_t, bundle.sorted_indices_1based);
+        if (time_this_bin) {
+            t1 = clock::now();
         }
 
-        dec_hist.push(s_t);
+        if (!o.valid) {
+            continue;
+        }
+        if (col >= T_valid) {
+            throw std::runtime_error("replay produced too many valid cols");
+        }
+
+        if (time_this_bin) {
+            latency_us.push_back(
+                std::chrono::duration_cast<std::chrono::microseconds>(t1 - t0).count()
+            );
+        }
 
         if (record) {
-            Eigen::VectorXd e_t = dec_hist.flatten_for_python_decoder();
-
-            Eigen::MatrixXd E(e_t.size(), 1);
-            E.col(0) = e_t;
-
-            Eigen::MatrixXd y = decodingModel01_forward(
-                E, xoffset, gain, ymin,
-                bundle.decoder_W1, bundle.decoder_b1,
-                bundle.decoder_W2, bundle.decoder_b2
-            );
-
-            out.decoder_logits.col(rec_col) = y.col(0);
-
-            Eigen::Index arg = 0;
-            y.col(0).maxCoeff(&arg);
-            out.labels(rec_col) = static_cast<int>(arg) + 1;
-
-            const auto t1 = std::chrono::high_resolution_clock::now();
-            if (cfg.dump_latency_us) {
-                const auto us = std::chrono::duration_cast<std::chrono::microseconds>(t1 - t0).count();
-                latency_us.push_back(us);
-            }
+            out.decoder_logits.col(rec_col) = o.decoder_y;
+            out.labels(rec_col) = o.label_1based;
 
             if (cfg.dump_generator_probs) {
-                probs_dump.col(rec_col) = p_t;
+                probs_dump.col(rec_col) = o.gen_prob;
             }
             if (cfg.dump_downstream_spikes) {
-                spikes_dump.col(rec_col) = s_t;
+                Eigen::VectorXd s_dump = o.gen_spikes;
+                if (bundle.sorted_indices_1based.size() > 0) {
+                    s_dump = apply_sorted_indices_1based(s_dump, bundle.sorted_indices_1based);
+                }
+                spikes_dump.col(rec_col) = s_dump;
             }
             if (cfg.dump_decoder_features) {
-                feats_dump.col(rec_col) = e_t;
+                feats_dump.col(rec_col) = o.decoder_ensemble;
+            }
+            if (hardware_trace_out) {
+                std::vector<std::uint8_t> packed;
+                pack_rlpp_hardware_frame_v1(o, t, static_cast<std::uint64_t>(rec_col), packed);
+                hardware_trace_out->write(
+                    reinterpret_cast<const char*>(packed.data()),
+                    static_cast<std::streamsize>(packed.size())
+                );
+                if (!*hardware_trace_out) {
+                    throw std::runtime_error("replay: write failed on hardware_trace_v1.bin");
+                }
             }
 
             ++rec_col;
             if (rec_col >= out_cols) {
-                // Window filled; we can stop replay early.
                 break;
             }
         }
@@ -292,7 +297,6 @@ ReplayResult run_replay_or_throw(
     }
     out.label_mismatches = mism;
 
-    // Phase 2.3 metrics (meaningful in sampled mode; also fine to print in deterministic mode)
     if (cfg.dump_generator_probs && cfg.dump_downstream_spikes) {
         print_spike_rate_calibration(probs_dump, spikes_dump);
     }

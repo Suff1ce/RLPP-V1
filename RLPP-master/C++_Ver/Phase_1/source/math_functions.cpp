@@ -3,6 +3,50 @@
 #include <cmath>
 #include <stdexcept>
 
+Eigen::VectorXd apply_sorted_indices_1based(
+    const Eigen::VectorXd& v_unsorted,
+    const Eigen::VectorXi& sorted_indices_1based
+) {
+    if (sorted_indices_1based.size() == 0) {
+        return v_unsorted;
+    }
+    const int n = static_cast<int>(v_unsorted.size());
+    if (sorted_indices_1based.size() != n) {
+        throw std::runtime_error("sorted_indices_1based length != vector length");
+    }
+    Eigen::VectorXd out(n);
+    for (int i = 0; i < n; ++i) {
+        const int src = sorted_indices_1based(i) - 1;
+        if (src < 0 || src >= n) {
+            throw std::runtime_error("sorted index out of range");
+        }
+        out(i) = v_unsorted(src);
+    }
+    return out;
+}
+
+Eigen::MatrixXd apply_sorted_indices_1based_matrix(
+    const Eigen::MatrixXd& spikes_Ny_by_T,
+    const Eigen::VectorXi& sorted_indices_1based
+) {
+    if (sorted_indices_1based.size() == 0) {
+        return spikes_Ny_by_T;
+    }
+    const int Ny = static_cast<int>(spikes_Ny_by_T.rows());
+    const int T = static_cast<int>(spikes_Ny_by_T.cols());
+    if (sorted_indices_1based.size() != Ny) {
+        throw std::runtime_error(
+            "sortedIndices length must equal Ny (got " + std::to_string(sorted_indices_1based.size()) +
+            ", Ny=" + std::to_string(Ny) + ")");
+    }
+    Eigen::MatrixXd out(Ny, T);
+    for (int c = 0; c < T; ++c) {
+        Eigen::VectorXd col = spikes_Ny_by_T.col(c);
+        out.col(c) = apply_sorted_indices_1based(col, sorted_indices_1based);
+    }
+    return out;
+}
+
 double sigmoid_scalar(double x) {
     return 1.0 / (1.0 + std::exp(-x));
 }

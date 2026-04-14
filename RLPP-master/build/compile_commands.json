@@ -64,5 +64,11 @@
   "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\replay_runner.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\replay_runner.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/replay_runner.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/replay_runner.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\RLPP_inference.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\RLPP_inference.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/RLPP_inference.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/RLPP_inference.cpp.obj"
 }
 ]

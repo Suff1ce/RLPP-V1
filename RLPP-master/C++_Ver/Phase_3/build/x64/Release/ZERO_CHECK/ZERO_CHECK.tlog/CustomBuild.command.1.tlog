@@ -1,0 +1,10 @@
+^D:\RLPP-MASTER\C++_VER\PHASE_3\BUILD\CMAKEFILES\1FE87A81AB540148A849C6F322D5C086\GENERATE.STAMP.RULE
+setlocal
+D:\CMake\bin\cmake.exe -SD:/RLPP-master/C++_Ver/Phase_3 -BD:/RLPP-master/C++_Ver/Phase_3/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/RLPP-master/C++_Ver/Phase_3/build/RLPP_Phase_3.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
