@@ -43,6 +43,7 @@ target_include_directories(RLPP_Phase_3_LoaderEmuVerify PRIVATE
 
 add_executable(RLPP_Phase_3_Run
     source/rlpp_phase3_run_main.cpp
+    source/rlpp_phase3_export_inference_bundle.cpp
     source/rlpp_phase3_training_case_parity.cpp
     source/rlpp_dataloader.cpp
     source/rlpp_emulator.cpp

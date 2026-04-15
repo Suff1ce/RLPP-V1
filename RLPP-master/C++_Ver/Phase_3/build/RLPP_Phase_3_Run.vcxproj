@@ -365,6 +365,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_3\source\rlpp_phase3_run_main.cpp" />
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_3\source\rlpp_phase3_export_inference_bundle.cpp" />
     <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_3\source\rlpp_phase3_training_case_parity.cpp" />
     <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_3\source\rlpp_dataloader.cpp" />
     <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_3\source\rlpp_emulator.cpp" />

@@ -10,6 +10,7 @@
 	<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="de6a1bf2-3d6f-32a6-921d-d529d21f4f07" DefaultStartup="true">
 		<BuildDependency Project="RLPP_Phase_1.vcxproj"/>
 		<BuildDependency Project="RLPP_hardware_udp_loopback.vcxproj"/>
+		<BuildDependency Project="RLPP_realtime_udp_infer.vcxproj"/>
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 		<Build Solution="Debug|*" Project="false"/>
 		<Build Solution="Release|*" Project="false"/>
@@ -20,6 +21,9 @@
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 	</Project>
 	<Project Path="RLPP_hardware_udp_loopback.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="040b3294-a13a-31b4-ae9a-8c12c7cd3ecf">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="RLPP_realtime_udp_infer.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="2fdc13e4-d7bf-35a4-a9a9-810c1ad20d9a">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 	</Project>
 	<Project Path="ZERO_CHECK.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="eff2e24e-85b4-3f58-9e65-f70855f2efc1"/>

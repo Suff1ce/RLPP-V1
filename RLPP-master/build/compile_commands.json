@@ -1,74 +1,164 @@
 [
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\main.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\main.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\main.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\main.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/main.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/main.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\csv_utils.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\csv_utils.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\rlpp_phase1_cli.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\rlpp_phase1_cli.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/rlpp_phase1_cli.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/rlpp_phase1_cli.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\csv_utils.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\csv_utils.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/csv_utils.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/csv_utils.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\math_functions.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\math_functions.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\math_functions.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\math_functions.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/math_functions.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/math_functions.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\two_layer_mlp.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\two_layer_mlp.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\two_layer_mlp.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\two_layer_mlp.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/two_layer_mlp.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/two_layer_mlp.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\exponential_history_encoder.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\exponential_history_encoder.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\exponential_history_encoder.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\exponential_history_encoder.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/exponential_history_encoder.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/exponential_history_encoder.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\decoder_history_buffer.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\decoder_history_buffer.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\decoder_history_buffer.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\decoder_history_buffer.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/decoder_history_buffer.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/decoder_history_buffer.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\F1_rat01_bundle.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\F1_rat01_bundle.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\F1_rat01_bundle.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\F1_rat01_bundle.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/F1_rat01_bundle.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/F1_rat01_bundle.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\F1_rat01_validate.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\F1_rat01_validate.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\F1_rat01_validate.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\F1_rat01_validate.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/F1_rat01_validate.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/F1_rat01_validate.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\F1_rat01_parity.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\F1_rat01_parity.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\F1_rat01_parity.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\F1_rat01_parity.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/F1_rat01_parity.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/F1_rat01_parity.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\decoding_model01.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\decoding_model01.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\decoding_model01.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\decoding_model01.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/decoding_model01.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/decoding_model01.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\replay_runner.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\replay_runner.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\replay_runner.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\replay_runner.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/replay_runner.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/replay_runner.cpp.obj"
 },
 {
   "directory": "D:/RLPP-master/build",
-  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\RLPP_inference.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\RLPP_inference.cpp",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\RLPP_inference.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\RLPP_inference.cpp",
   "file": "D:/RLPP-master/C++_Ver/Phase_1/source/RLPP_inference.cpp",
   "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/RLPP_inference.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_Phase_1.dir\\source\\rlpp_hardware_output.cpp.obj /FdCMakeFiles\\RLPP_Phase_1.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\rlpp_hardware_output.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/rlpp_hardware_output.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_Phase_1.dir/source/rlpp_hardware_output.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_hardware_udp_loopback.dir\\source\\hardware_frame_v1.cpp.obj /FdCMakeFiles\\RLPP_hardware_udp_loopback.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\hardware_frame_v1.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/hardware_frame_v1.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_hardware_udp_loopback.dir/source/hardware_frame_v1.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_hardware_udp_loopback.dir\\source\\hardware_udp_loopback_main.cpp.obj /FdCMakeFiles\\RLPP_hardware_udp_loopback.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\hardware_udp_loopback_main.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/hardware_udp_loopback_main.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_hardware_udp_loopback.dir/source/hardware_udp_loopback_main.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\rlpp_realtime_udp_infer_main.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\rlpp_realtime_udp_infer_main.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/rlpp_realtime_udp_infer_main.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/rlpp_realtime_udp_infer_main.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\upstream_frame_v1.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\upstream_frame_v1.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/upstream_frame_v1.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/upstream_frame_v1.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\csv_utils.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\csv_utils.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/csv_utils.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/csv_utils.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\math_functions.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\math_functions.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/math_functions.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/math_functions.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\two_layer_mlp.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\two_layer_mlp.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/two_layer_mlp.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/two_layer_mlp.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\exponential_history_encoder.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\exponential_history_encoder.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/exponential_history_encoder.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/exponential_history_encoder.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\decoder_history_buffer.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\decoder_history_buffer.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/decoder_history_buffer.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/decoder_history_buffer.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\F1_rat01_bundle.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\F1_rat01_bundle.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/F1_rat01_bundle.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/F1_rat01_bundle.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\decoding_model01.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\decoding_model01.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/decoding_model01.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/decoding_model01.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\RLPP_inference.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\RLPP_inference.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/RLPP_inference.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/RLPP_inference.cpp.obj"
+},
+{
+  "directory": "D:/RLPP-master/build",
+  "command": "D:\\MICROS~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\External\\eigen -ID:\\RLPP-master\\C++_Ver\\Phase_1\\..\\Include /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /FoCMakeFiles\\RLPP_realtime_udp_infer.dir\\source\\rlpp_hardware_output.cpp.obj /FdCMakeFiles\\RLPP_realtime_udp_infer.dir\\ /FS -c D:\\RLPP-master\\C++_Ver\\Phase_1\\source\\rlpp_hardware_output.cpp",
+  "file": "D:/RLPP-master/C++_Ver/Phase_1/source/rlpp_hardware_output.cpp",
+  "output": "D:/RLPP-master/build/CMakeFiles/RLPP_realtime_udp_infer.dir/source/rlpp_hardware_output.cpp.obj"
 }
 ]

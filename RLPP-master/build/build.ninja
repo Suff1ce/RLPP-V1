@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: RLPP_Phase_1
-# Configurations: Release
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Release
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -49,9 +49,9 @@ cmake_ninja_workdir = D$:\RLPP-master\build\
 
 build cmake_object_order_depends_target_RLPP_Phase_1: phony || .
 
-build CMakeFiles\RLPP_Phase_1.dir\source\main.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\main.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\main.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\main.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -59,9 +59,9 @@ build CMakeFiles\RLPP_Phase_1.dir\source\main.cpp.obj: CXX_COMPILER__RLPP_Phase_
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\csv_utils.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\csv_utils.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\rlpp_phase1_cli.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\rlpp_phase1_cli.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -69,9 +69,9 @@ build CMakeFiles\RLPP_Phase_1.dir\source\csv_utils.cpp.obj: CXX_COMPILER__RLPP_P
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\math_functions.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\math_functions.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\csv_utils.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\csv_utils.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -79,9 +79,9 @@ build CMakeFiles\RLPP_Phase_1.dir\source\math_functions.cpp.obj: CXX_COMPILER__R
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\two_layer_mlp.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\two_layer_mlp.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\math_functions.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\math_functions.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -89,9 +89,9 @@ build CMakeFiles\RLPP_Phase_1.dir\source\two_layer_mlp.cpp.obj: CXX_COMPILER__RL
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\exponential_history_encoder.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\exponential_history_encoder.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\two_layer_mlp.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\two_layer_mlp.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -99,9 +99,9 @@ build CMakeFiles\RLPP_Phase_1.dir\source\exponential_history_encoder.cpp.obj: CX
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\decoder_history_buffer.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\decoder_history_buffer.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\exponential_history_encoder.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\exponential_history_encoder.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -109,9 +109,9 @@ build CMakeFiles\RLPP_Phase_1.dir\source\decoder_history_buffer.cpp.obj: CXX_COM
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_bundle.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\F1_rat01_bundle.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\decoder_history_buffer.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\decoder_history_buffer.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -119,9 +119,9 @@ build CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_bundle.cpp.obj: CXX_COMPILER__
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_validate.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\F1_rat01_validate.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_bundle.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\F1_rat01_bundle.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -129,9 +129,9 @@ build CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_validate.cpp.obj: CXX_COMPILER
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_parity.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\F1_rat01_parity.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_validate.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\F1_rat01_validate.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -139,9 +139,9 @@ build CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_parity.cpp.obj: CXX_COMPILER__
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\decoding_model01.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\decoding_model01.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_parity.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\F1_rat01_parity.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -149,9 +149,9 @@ build CMakeFiles\RLPP_Phase_1.dir\source\decoding_model01.cpp.obj: CXX_COMPILER_
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\replay_runner.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\replay_runner.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\decoding_model01.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\decoding_model01.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -159,9 +159,29 @@ build CMakeFiles\RLPP_Phase_1.dir\source\replay_runner.cpp.obj: CXX_COMPILER__RL
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
 
-build CMakeFiles\RLPP_Phase_1.dir\source\RLPP_inference.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Release D$:\RLPP-master\C++_Ver\Phase_1\source\RLPP_inference.cpp || cmake_object_order_depends_target_RLPP_Phase_1
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD
+build CMakeFiles\RLPP_Phase_1.dir\source\replay_runner.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\replay_runner.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_Phase_1.dir\
+  TARGET_PDB = RLPP_Phase_1.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
+
+build CMakeFiles\RLPP_Phase_1.dir\source\RLPP_inference.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\RLPP_inference.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_Phase_1.dir\
+  TARGET_PDB = RLPP_Phase_1.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
+
+build CMakeFiles\RLPP_Phase_1.dir\source\rlpp_hardware_output.cpp.obj: CXX_COMPILER__RLPP_Phase_1_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\rlpp_hardware_output.cpp || cmake_object_order_depends_target_RLPP_Phase_1
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
   INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   OBJECT_FILE_DIR = CMakeFiles\RLPP_Phase_1.dir\source
@@ -177,10 +197,10 @@ build CMakeFiles\RLPP_Phase_1.dir\source\RLPP_inference.cpp.obj: CXX_COMPILER__R
 #############################################
 # Link the executable RLPP_Phase_1.exe
 
-build RLPP_Phase_1.exe: CXX_EXECUTABLE_LINKER__RLPP_Phase_1_Release CMakeFiles\RLPP_Phase_1.dir\source\main.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\csv_utils.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\math_functions.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\two_layer_mlp.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\exponential_history_encoder.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\decoder_history_buffer.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_bundle.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_validate.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_parity.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\decoding_model01.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\replay_runner.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\RLPP_inference.cpp.obj
-  CONFIG = Release
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD
-  LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
+build RLPP_Phase_1.exe: CXX_EXECUTABLE_LINKER__RLPP_Phase_1_Debug CMakeFiles\RLPP_Phase_1.dir\source\main.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\rlpp_phase1_cli.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\csv_utils.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\math_functions.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\two_layer_mlp.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\exponential_history_encoder.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\decoder_history_buffer.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_bundle.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_validate.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\F1_rat01_parity.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\decoding_model01.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\replay_runner.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\RLPP_inference.cpp.obj CMakeFiles\RLPP_Phase_1.dir\source\rlpp_hardware_output.cpp.obj
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\RLPP_Phase_1.dir
   POST_BUILD = cd .
@@ -190,6 +210,198 @@ build RLPP_Phase_1.exe: CXX_EXECUTABLE_LINKER__RLPP_Phase_1_Release CMakeFiles\R
   TARGET_IMPLIB = RLPP_Phase_1.lib
   TARGET_PDB = RLPP_Phase_1.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\RLPP_Phase_1.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target RLPP_hardware_udp_loopback
+
+
+#############################################
+# Order-only phony target for RLPP_hardware_udp_loopback
+
+build cmake_object_order_depends_target_RLPP_hardware_udp_loopback: phony || .
+
+build CMakeFiles\RLPP_hardware_udp_loopback.dir\source\hardware_frame_v1.cpp.obj: CXX_COMPILER__RLPP_hardware_udp_loopback_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\hardware_frame_v1.cpp || cmake_object_order_depends_target_RLPP_hardware_udp_loopback
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_hardware_udp_loopback.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_hardware_udp_loopback.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_hardware_udp_loopback.dir\
+  TARGET_PDB = RLPP_hardware_udp_loopback.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_hardware_udp_loopback.dir
+
+build CMakeFiles\RLPP_hardware_udp_loopback.dir\source\hardware_udp_loopback_main.cpp.obj: CXX_COMPILER__RLPP_hardware_udp_loopback_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\hardware_udp_loopback_main.cpp || cmake_object_order_depends_target_RLPP_hardware_udp_loopback
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_hardware_udp_loopback.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_hardware_udp_loopback.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_hardware_udp_loopback.dir\
+  TARGET_PDB = RLPP_hardware_udp_loopback.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_hardware_udp_loopback.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target RLPP_hardware_udp_loopback
+
+
+#############################################
+# Link the executable RLPP_hardware_udp_loopback.exe
+
+build RLPP_hardware_udp_loopback.exe: CXX_EXECUTABLE_LINKER__RLPP_hardware_udp_loopback_Debug CMakeFiles\RLPP_hardware_udp_loopback.dir\source\hardware_frame_v1.cpp.obj CMakeFiles\RLPP_hardware_udp_loopback.dir\source\hardware_udp_loopback_main.cpp.obj
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\RLPP_hardware_udp_loopback.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_hardware_udp_loopback.dir\
+  TARGET_FILE = RLPP_hardware_udp_loopback.exe
+  TARGET_IMPLIB = RLPP_hardware_udp_loopback.lib
+  TARGET_PDB = RLPP_hardware_udp_loopback.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_hardware_udp_loopback.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target RLPP_realtime_udp_infer
+
+
+#############################################
+# Order-only phony target for RLPP_realtime_udp_infer
+
+build cmake_object_order_depends_target_RLPP_realtime_udp_infer: phony || .
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\rlpp_realtime_udp_infer_main.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\rlpp_realtime_udp_infer_main.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\upstream_frame_v1.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\upstream_frame_v1.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\csv_utils.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\csv_utils.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\math_functions.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\math_functions.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\two_layer_mlp.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\two_layer_mlp.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\exponential_history_encoder.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\exponential_history_encoder.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\decoder_history_buffer.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\decoder_history_buffer.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\F1_rat01_bundle.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\F1_rat01_bundle.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\decoding_model01.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\decoding_model01.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\RLPP_inference.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\RLPP_inference.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+build CMakeFiles\RLPP_realtime_udp_infer.dir\source\rlpp_hardware_output.cpp.obj: CXX_COMPILER__RLPP_realtime_udp_infer_unscanned_Debug D$:\RLPP-master\C++_Ver\Phase_1\source\rlpp_hardware_output.cpp || cmake_object_order_depends_target_RLPP_realtime_udp_infer
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd
+  INCLUDES = -ID:\RLPP-master\C++_Ver\Phase_1\..\External\eigen -ID:\RLPP-master\C++_Ver\Phase_1\..\Include
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  OBJECT_FILE_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir\source
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target RLPP_realtime_udp_infer
+
+
+#############################################
+# Link the executable RLPP_realtime_udp_infer.exe
+
+build RLPP_realtime_udp_infer.exe: CXX_EXECUTABLE_LINKER__RLPP_realtime_udp_infer_Debug CMakeFiles\RLPP_realtime_udp_infer.dir\source\rlpp_realtime_udp_infer_main.cpp.obj CMakeFiles\RLPP_realtime_udp_infer.dir\source\upstream_frame_v1.cpp.obj CMakeFiles\RLPP_realtime_udp_infer.dir\source\csv_utils.cpp.obj CMakeFiles\RLPP_realtime_udp_infer.dir\source\math_functions.cpp.obj CMakeFiles\RLPP_realtime_udp_infer.dir\source\two_layer_mlp.cpp.obj CMakeFiles\RLPP_realtime_udp_infer.dir\source\exponential_history_encoder.cpp.obj CMakeFiles\RLPP_realtime_udp_infer.dir\source\decoder_history_buffer.cpp.obj CMakeFiles\RLPP_realtime_udp_infer.dir\source\F1_rat01_bundle.cpp.obj CMakeFiles\RLPP_realtime_udp_infer.dir\source\decoding_model01.cpp.obj CMakeFiles\RLPP_realtime_udp_infer.dir\source\RLPP_inference.cpp.obj CMakeFiles\RLPP_realtime_udp_infer.dir\source\rlpp_hardware_output.cpp.obj
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\RLPP_realtime_udp_infer.dir\
+  TARGET_FILE = RLPP_realtime_udp_infer.exe
+  TARGET_IMPLIB = RLPP_realtime_udp_infer.lib
+  TARGET_PDB = RLPP_realtime_udp_infer.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\RLPP_realtime_udp_infer.dir
 
 
 #############################################
@@ -220,6 +432,10 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 build RLPP_Phase_1: phony RLPP_Phase_1.exe
 
+build RLPP_hardware_udp_loopback: phony RLPP_hardware_udp_loopback.exe
+
+build RLPP_realtime_udp_infer: phony RLPP_realtime_udp_infer.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -228,7 +444,7 @@ build RLPP_Phase_1: phony RLPP_Phase_1.exe
 #############################################
 # Folder: D:/RLPP-master/build
 
-build all: phony RLPP_Phase_1.exe
+build all: phony RLPP_Phase_1.exe RLPP_hardware_udp_loopback.exe RLPP_realtime_udp_infer.exe
 
 # =============================================================================
 # Built-in targets

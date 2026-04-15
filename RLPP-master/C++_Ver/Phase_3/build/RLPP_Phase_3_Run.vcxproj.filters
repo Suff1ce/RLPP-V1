@@ -4,6 +4,9 @@
     <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_3\source\rlpp_phase3_run_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_3\source\rlpp_phase3_export_inference_bundle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\RLPP-master\C++_Ver\Phase_3\source\rlpp_phase3_training_case_parity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

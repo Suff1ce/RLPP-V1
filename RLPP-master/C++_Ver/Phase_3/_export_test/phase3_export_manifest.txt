@@ -1,0 +1,17 @@
+RLPP Phase 3 -> Phase 1 inference bundle export
+====================================
+This directory was produced by RLPP_Phase_3_Run --export-bundle-dir.
+It is intended for RLPP_realtime_udp_infer / RLPP_Phase_1 load_f1_bundle().
+
+phase3_case_dir: d:/RLPP-master/C++_Ver/Phase_3/loader_emulator_case
+phase3_model: decodingModel_01
+decoder_prefix: d:/RLPP-master/C++_Ver/Phase_3/decoding_params/decoding01
+feat_rows_input_ensemble: 5
+phase3_export_inference_Nx: 5
+phase3_export_encoder_h: 1
+Ny: 61
+decoder_num_lags: 2
+num_labels: 3
+
+NOTE: encoder_features_ref / *_ref.csv files are synthetic placeholders for shape checks.
+Realtime inference uses trained generator weights + decoder weights + sortedIndices.

@@ -182,6 +182,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{040B3294-A13A-31B4-AE9A-8C12C7CD3ECF}</Project>
       <Name>RLPP_hardware_udp_loopback</Name>
     </ProjectReference>
+    <ProjectReference Include="D:\RLPP-master\C++_Ver\Phase_1\build\RLPP_realtime_udp_infer.vcxproj">
+      <Project>{2FDC13E4-D7BF-35A4-A9A9-810C1AD20D9A}</Project>
+      <Name>RLPP_realtime_udp_infer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

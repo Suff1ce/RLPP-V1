@@ -13,6 +13,7 @@
 #include "rlpp_training_math.hpp"
 #include "rlpp_decoding_params.hpp"
 #include "rlpp_phase3_training_case_parity.hpp"
+#include "rlpp_phase3_export_inference_bundle.hpp"
 
 #include <Eigen/Dense>
 
@@ -120,6 +121,11 @@ static void usage() {
         << "Deterministic parity (same as RLPP_Phase_3_Trainer; no DataLoader/emulator):\n"
         << "  --training-case DIR    run vs export_phase3_training_case.py CSVs (u01_ep*.csv forward)\n"
         << "  --tol X                tolerance for parity checks (with --training-case), default 1e-9\n"
+        << "\n"
+        << "After training: export a Phase 1 F1 bundle for RLPP_realtime_udp_infer:\n"
+        << "  --export-bundle-dir DIR   write generator/decoder CSVs + refs (omit to skip export)\n"
+        << "  --export-inference-nx N   upstream channel count Nx for bundle (default: feat, use with --export-encoder-h)\n"
+        << "  --export-encoder-h H      encoder history length H so Nx*H == inputEnsemble.rows() (default: 1)\n"
         << "\n";
 }
 
@@ -145,6 +151,10 @@ static int run_phase3_main(int argc, char** argv) {
     bool shuffle_train_trials = true;
 
     unsigned int seed = 2026;
+
+    std::string export_bundle_dir;
+    int export_inference_nx = 0;
+    int export_encoder_h = 0;
 
     for (int i = 1; i < argc; ++i) {
         const std::string a = argv[i];
@@ -186,6 +196,10 @@ static int run_phase3_main(int argc, char** argv) {
             continue;
         }
         if (a == "--seed") { seed = static_cast<unsigned int>(std::stoul(need(a))); continue; }
+
+        if (a == "--export-bundle-dir") { export_bundle_dir = need(a); continue; }
+        if (a == "--export-inference-nx") { export_inference_nx = std::stoi(need(a)); continue; }
+        if (a == "--export-encoder-h") { export_encoder_h = std::stoi(need(a)); continue; }
 
         throw std::runtime_error("Unknown arg: " + a);
     }
@@ -389,6 +403,22 @@ static int run_phase3_main(int argc, char** argv) {
                   << " W1_norm=" << W1.norm()
                   << " W2_norm=" << W2.norm()
                   << "\n";
+    }
+
+    if (!export_bundle_dir.empty()) {
+        export_phase3_inference_bundle(
+            export_bundle_dir,
+            W1,
+            W2,
+            indexes,
+            feat,
+            decoder_prefix,
+            export_inference_nx,
+            export_encoder_h,
+            to_string(model),
+            case_dir
+        );
+        std::cout << "Exported Phase 1 inference bundle to: " << export_bundle_dir << "\n";
     }
 
     std::cout << "Phase3_Run done.\n";
